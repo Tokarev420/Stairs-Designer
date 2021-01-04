@@ -1,0 +1,173 @@
+.newelItem{
+	position: relative;
+	width: 6rem;
+	height: 22rem;
+	display: inline-block;
+	border-radius: 0.2rem;
+	transition: all 0.3s ease;
+	transform: scale(0.75);
+}
+
+.newelItem:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+#newelGallery{
+	grid-column: 1 / 2;
+	width: 100%;
+	border-radius: 0.5rem;
+	background: #E9EBEC;
+	padding: 2em;
+	border:4px solid #7E291E;
+}
+
+#newelGalleryItems{
+	display: grid;
+	grid-gap: 0.75rem;
+	grid-template-columns: repeat(auto-fit, 5.25rem);
+}
+
+#balusterGallery{
+	grid-row: 1;
+	grid-column: 1 / 2;
+	width: 100%;
+	border-radius: 0.5rem;
+	background: #E9EBEC;
+	padding: 2em;
+	border:4px solid #7E291E;
+}
+
+#balusterGalleryItems{
+	width: 100%;
+	display: grid;
+	grid-gap: 0.75rem;
+	grid-template-columns: repeat(auto-fit, 2.25rem);
+}
+
+
+.balusterItem{
+	position: relative;
+	width: 3rem;
+	height: 18rem;
+	display: inline-block;
+	border-radius: 0.2rem;
+	transition: all 0.3s ease, filter 0s;
+	transform: scale(0.75);
+}
+
+
+
+.balusterItem:active{
+	filter: brightness(70%);
+}
+
+
+
+.balusterItem img{
+	height: 80%;
+	position: absolute;
+	top: 3%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.newelItem img{
+	height: 90%;
+	position: absolute;
+	top: -8%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.handrailItem img{
+	width: 90%;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.balusterItem:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.balusterItem.selected, .newelItem.selected, .handrailItem.selected{
+	transform: scale(1.2);
+}
+
+.balusterItem.selected p, .newelItem.selected p, .handrailItem.selected p{
+	font-weight: 800;
+}
+
+.balusterItem:hover p, .newelItem:hover p, .handrailItem:hover p{
+	opacity: 1;
+}
+
+.balusterItem p.selected, .newelItem p.selected, .handrailItem p.selected{
+	opacity: 1;
+}
+
+.balusterItem p, .newelItem p, .handrailItem p{
+	opacity: 0;
+	text-align: center;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-120%);
+	transition: all 0.35s ease 0.15s;
+}
+
+
+.balusterProductItem, .newelProductItem, .handrailProductItem{
+	border: 2px solid rgba(126, 41, 30, 0);
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.balusterProductItem img{
+	margin-top: 5rem;
+	height: 15rem;
+}
+
+.newelProductItem img{
+	height: 20rem;
+}
+
+.handrailProductItem img{
+	margin-top: 16rem;
+	height: 4rem;
+}
+
+
+#handrailGallery{
+	grid-column: 1 / 2;
+	width: 100%;
+	border-radius: 0.5rem;
+	background: #E9EBEC;
+	padding: 2em;
+	border:4px solid #7E291E;
+}
+
+#handrailGalleryItems{
+	width: 100%;
+	display: grid;
+	grid-gap: 4em;
+	grid-template-columns: repeat(auto-fit, 7rem);
+}
+
+.handrailItem{
+	position: relative;
+	width: 9rem;
+	height: 12rem;
+	display: inline-block;
+	border-radius: 0.2rem;
+	transition: all 0.3s ease;
+	transform: scale(0.75);
+}
+
+.handrailItem:hover{
+	cursor: pointer;
+	transform: scale(1.2);
+}

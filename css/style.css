@@ -17,7 +17,7 @@
 
 html{
 	font-size: 16px;
-
+	scroll-behavior: smooth;
 }
 
 body{
@@ -25,71 +25,30 @@ body{
  	font-family:"aileron";
  }
 
- #title .logo{
- 	width: 90%;
- 	filter: invert(100%);
- }
-
-
-
-
-#title{
-	display: grid;
-	grid-template-columns: 1fr 5fr 1fr;
-	grid-template-rows: 1fr;
-	height: 10rem;
-}
-
-#title h1{
-	font-size: 2.5rem;
-}
 
 #container{
 	width: 90%;
 	margin: 3rem auto;
 }
 
+.bordered{
+	border-radius: 0.5rem;
+	border:4px solid #7E291E;
+}
+
+
 #wrapper{
+	margin-top: 1.5rem;
 	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	/*TO DO: Pancakes*/
+	display: grid;
+	grid-gap: 1.5rem;
+	grid-template-columns: 1.25fr 0.75fr;
 }
 
 
-#room{
-	border:4px solid #7E291E;
-	background: #E9EBEC;
-	border-radius: 0.5rem;
-	flex: 2 1;
-	min-width: 36rem;
-	height: 36rem;
-	display: inline-block;
-	position: relative;
-	margin: 1rem;
-	transition: all .3s ease;
-}
-
-#controls{
-	min-width: 24rem;
-	flex: 2 1;
-	border:4px solid #7E291E;
-	border-radius: 0.5rem;
-	background: #E9EBEC;
-	margin: 1rem;
-}
-#controls h1{
-	margin: 2rem;
-}
-
-#stepsSlider{
-	grid-column: 2 / 4;
-	margin-bottom: 2rem;
-}
 
 #products{
-	min-width: 24rem;
+	grid-column: 1/2;
 	height: 36rem;
 	border:4px solid #7E291E;
 	position: relative;
@@ -98,108 +57,9 @@ body{
 	align-items: center;
 	border-radius: 0.5rem;
 	padding: 2rem;
-	flex:2 1;
 	background: #E9EBEC;
-	margin: 1rem;
 }
 
-#stair{
-	position: absolute;
-}
-
-#handrail{
-	position: absolute;
-	z-index: 10;
-}
-
-#baluster{
-	position: absolute;
-	z-index: 1;
-}
-
-
-
-.promoText{
-	width: 100%;
-	margin: 1rem;
-	display: inline-block;
-	position: relative;
-}
-
-.promoTextLeft{
-	display: inline-block;
-	position: absolute;
-	font-size: 2em;
-	font-weight: 800;
-	text-transform: uppercase;
-	transform: translateY(-50%);
-}
-
-.promoTextRight{
-	display: block;
-	margin-right: 4rem;
-	text-align: right;
-	font-size: 1.5em;
-	font-weight: 300;
-	text-transform: uppercase;
-	transform: translateY(-50%);
-}
-
-
-#buyButton{
-	text-align: center;
-	/*position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-150%);*/
-	padding: 1.25rem 2rem;
-	border-radius: 0.25rem;
-	background: lightblue;
-	font-size: 1.5rem;
-	font-weight: 300;
-	transition: all 0.5s ease-in 0s;
-	cursor: pointer;
-}
-
-#buyButton:hover{
-	background: #0f0;
-}
-
-
-
-
-#handrailGallery{
-	/*max-width: 90rem;*/
-	width: 100%;
-	margin-right: 3rem;
-	border-radius: 0.5rem;
-	background: #E9EBEC;
-	padding: 2em;
-	margin-top: 2em;
-	border:4px solid #7E291E;
-}
-
-#handrailGalleryItems{
-	width: 100%;
-	display: grid;
-	grid-gap: 4em;
-	grid-template-columns: repeat(auto-fit, 7rem);
-}
-
-.handrailItem{
-	position: relative;
-	width: 10rem;
-	height: 12rem;
-	display: inline-block;
-	border-radius: 0.2rem;
-	transition: all 0.3s ease;
-	transform: scale(0.75);
-}
-
-.handrailItem:hover{
-	cursor: pointer;
-	transform: scale(1);
-}
 
 
 #actualProducts{
@@ -208,147 +68,6 @@ body{
 	grid-template-columns: repeat(3, 1fr);
 }
 
-#actualControls{
-	display:grid;
-	height: 20rem;
-	grid-gap: 1.5rem;
-	justify-content: center;
-	align-content: center;
-	grid-template-columns: repeat(3, auto);
-	grid-template-rows: repeat(3, 1fr);
-	text-align: center;
-}
-
-.switchText{
-	margin-top: .5em;
-}
-
-
-#balusterGallery{
-	width: 100%;
-	margin-right: 3rem;
-	border-radius: 0.5rem;
-	background: #E9EBEC;
-	padding: 2em;
-	margin-top: 2em;
-	border:4px solid #7E291E;
-}
-
-#balusterGalleryItems{
-	width: 100%;
-	display: grid;
-	grid-gap: 0.75rem;
-	grid-template-columns: repeat(auto-fit, 4.25rem);
-}
 
 
 
-.balusterItem{
-	position: relative;
-	width: 5rem;
-	height: 18rem;
-	display: inline-block;
-	border-radius: 0.2rem;
-	transition: all 0.3s ease;
-	transform: scale(0.75);
-}
-
-
-.balusterItem img{
-	height: 80%;
-	position: absolute;
-	top: 3%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.newelItem img{
-	height: 90%;
-	position: absolute;
-	top: -8%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.handrailItem img{
-	width: 90%;
-	position: absolute;
-	top: 10%;
-	left: 50%;
-	transform: translateX(-50%);
-}
-
-.balusterItem:hover{
-	cursor: pointer;
-	transform: scale(1);
-}
-
-.balusterItem:hover p, .newelItem:hover p, .handrailItem:hover p{
-	opacity: 1;
-}
-
-.balusterItem p.selected, .newelItem p.selected, .handrailItem p.selected{
-	opacity: 1;
-}
-
-.balusterItem p, .newelItem p, .handrailItem p{
-	opacity: 0;
-	text-align: center;
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-115%);
-	transition: all 0.35s ease 0.15s;
-}
-
-
-.balusterProductItem, .newelProductItem, .handrailProductItem{
-	border: 2px solid rgba(126, 41, 30, 0);
-	margin-bottom: 2rem;
-	text-align: center;
-}
-
-.balusterProductItem img{
-	margin-top: 5rem;
-	height: 15rem;
-}
-
-.newelProductItem img{
-	height: 20rem;
-}
-
-.handrailProductItem img{
-	margin-top: 16rem;
-	height: 4rem;
-}
-
-.newelItem{
-	position: relative;
-	width: 6rem;
-	height: 22rem;
-	display: inline-block;
-	border-radius: 0.2rem;
-	transition: all 0.3s ease;
-	transform: scale(0.75);
-}
-
-.newelItem:hover{
-	cursor: pointer;
-	transform: scale(1);
-}
-
-#newelGallery{
-	width: 100%;
-	margin-right: 3rem;
-	border-radius: 0.5rem;
-	background: #E9EBEC;
-	padding: 2em;
-	margin-top: 2em;
-	border:4px solid #7E291E;
-}
-
-#newelGalleryItems{
-	display: grid;
-	grid-gap: 0.75rem;
-	grid-template-columns: repeat(auto-fit, 5.25rem);
-}

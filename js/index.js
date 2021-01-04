@@ -1,5 +1,6 @@
-var SELECTOR_BACKGROUND = "#bbb";
-var SELECTOR_STROKE = "2px solid #7E291E";
+var SELECTOR_BACKGROUND = "";
+var SELECTOR_STROKE = "";
+var SELECTOR_SCALE = "1.2";
 
 
 var LEFT = 12.0;

@@ -4,6 +4,8 @@
 	<meta name="description" content="Stair Service Online Designer Tool with multiple design options. Choose your newels, balusters and handrails.">
 	<title>Stairs Designer Tool</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/others.css">
+	<link rel="stylesheet" href="css/galleries.css">
 	<link rel="stylesheet" href="css/elements.css">
 	<link rel="stylesheet" href="css/controls.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,38 +17,103 @@
 			<img class="logo" src="res/logo.png">
 			<h1>Stair Service Online Designer Tool</h1><br><br>
 		</div>
-		<div id="wrapper">
-			<div id="controls" class="wrapped">
-				<h1>Controls</h1>
-				<div id="actualControls">
-						<div class="switchText">WOOD</div>
-						<label class="switch">
-						  <input type="checkbox" id="material" name="material">
-						  	<span class="slider round"></span>
-						</label>
-						<div class="switchText">IRON</div>
+		
+		<section id="controls" class="bordered">
 
-						<div class="switchText">POST-TO-POST</div>
-						<label class="switch">
-						  <input type="checkbox" id="state" name="state">
-						  	<span class="slider colored round"></span>
-						</label>
-						<div class="switchText">OVER THE NEWEL</div>
-
-						<div class="switchText">STEPS</div>
-
-						<div id="stepsSlider">
-							<input type="range" min="2" max="8" value="5" class="sliderRange" id="steps" name="steps">
-						</div>
+			<div class="">
+				<h2>CHOOSE YOUR MATERIAL</h2>
+				<div class="control">
+					<div class="switchText" align="right">WOOD</div>
+					<label class="switch">
+				 	<input type="checkbox" id="material" name="material">
+				  	<span class="slider round"></span>
+					</label>
+					<div class="switchText" align="left">IRON</div>
 				</div>
 			</div>
-			<div id="room" class="wrapped">
+
+			<div class="">
+				<h2>CHOOSE YOUR HANDRAIL</h2>
+				<div class="control">
+					<div class="switchText" align="right">POST-TO-POST</div>
+					<label class="switch">
+					  	<input type="checkbox" id="state" name="state">
+					  	<span class="slider colored round"></span>
+					</label>
+					<div class="switchText" align="left">OVER THE NEWEL</div>
+				</div>
+			</div>
+
+			<div class="">
+				<h2>KNEEWALL</h2>
+				<div class="control">
+					<div class="switchText" align="right">ON</div>
+					<label class="switch">
+					  	<input type="checkbox" id="kneewallInput" name="kneewallInput" checked>
+					  	<span class="slider colored2 round"></span>
+					</label>
+					<div class="switchText" align="left">OFF</div>
+				</div>
+			</div>
+
+			<div class="">
+				<h2>CHOOSE THE NUMBER OF STEPS</h2>
+				<div class="control stepsControl">
+					<div class="switchText">STEPS</div>
+					<div id="stepsSlider">
+						<input type="range" min="2" max="8" value="5" class="sliderRange" id="steps" name="steps">
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<div id="wrapper">
+			<section id="balusterGallery">
+				<div class="promoText">
+					<div class="promoTextLeft">
+						<p>Balusters</p>
+					</div>
+					<div class="promoTextRight">
+						<p>Click to select</p>
+					</div>
+				</div>
+				<div id="balusterGalleryItems"></div>
+			</section>
+
+			<section id="newelGallery">
+				<div class="promoText">
+					<div class="promoTextLeft">
+						<p>Newels</p>
+					</div>
+					<div class="promoTextRight">
+						<p>Click to select</p>
+					</div>
+				</div>
+				<div id="newelGalleryItems"></div>
+			</section>
+
+			<section id="handrailGallery">
+				<div class="promoText">
+					<div class="promoTextLeft">
+						<p>Handrails</p>
+					</div>
+					<div class="promoTextRight">
+						<p>Click to select</p>
+					</div>
+				</div>
+				<div id="handrailGalleryItems"></div>
+			</section>
+
+			<section id="room" class="wrapped">
 				<div id="stair"></div>
 				<div id="handrail"></div>
 				<div id="newel"></div>
 				<div id="baluster"></div>
-			</div>
-			<div id="products" class="wrapped">
+				<div id="kneewall"></div>
+			</section>
+
+			<section id="products" class="wrapped">
 				<h1>Products</h1>
 
 				<div id="actualProducts">
@@ -58,51 +125,14 @@
 				<div id="buyButton">
 					<p>DOWNLOAD</p>
 				</div>
-			</div>
-		</div>
+			</section>
 
-		<div id="balusterGallery">
-			<div class="promoText">
-				<div class="promoTextLeft">
-					<p>Balusters</p>
-				</div>
-				<div class="promoTextRight">
-					<p>Click to select</p>
-				</div>
-			</div>
-			<div id="balusterGalleryItems">
-				
-			</div>
 		</div>
-
-		<div id="newelGallery">
-			<div class="promoText">
-				<div class="promoTextLeft">
-					<p>Newels</p>
-				</div>
-				<div class="promoTextRight">
-					<p>Click to select</p>
-				</div>
-			</div>
-			<div id="newelGalleryItems">
-				
-			</div>
-		</div>
-
-		<div id="handrailGallery">
-			<div class="promoText">
-				<div class="promoTextLeft">
-					<p>Handrails</p>
-				</div>
-				<div class="promoTextRight">
-					<p>Click to select</p>
-				</div>
-			</div>
-			<div id="handrailGalleryItems">
-				
-			</div>
-		</div>
+		
 	</div>
+	<script src="js/newels.js"></script>
+	<script src="js/handrails.js"></script>
+	<script src="js/balusters.js"></script>
 	<script src="js/vars.js"></script>
 	<script src="js/dictionary.js"></script>
 	<script src="js/draw.js"></script>

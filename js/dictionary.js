@@ -174,7 +174,14 @@ var DICTIONARY = [
   [ '6003', 'LJ-6003' ],
   [ '6203', 'LJ-6203' ],
   [ 'P3910', 'LJP-3910' ],
-  [ 'NWL14048sb', 'LI-NWL14048 ' ]
+  [ 'NWL14048sb', 'LI-NWL14048'],
+  ['6109P1', 'LJ-6109P1'],
+  ['6210P', 'LJ-6210P'],
+  ['6400P', 'LJ-6400P'],
+  ['6900P', 'LJ-6900P'],
+  ['6A10P1', 'LJ-6A10P1'],
+  ['6B10P1', 'LJ-6B10P1'],
+  ['6005', 'LJ-6005']
 ];
 
 
@@ -186,10 +193,24 @@ function getName(key){
 
 
 function parseName(key){
+
   var name = getName(key);
+  if(name === undefined)
+  {
+    return undefined;
+  }
+
+  
   var split = name.split('-');
   var textAdjust = "";
-  if(split[1].length > 6) textAdjust = `style="font-size: 85%"`;
-  if(split[1].length > 8) textAdjust = `style="font-size: 70%"`;
+  if(split.length > 1){
+    if(split[1].length > 6) textAdjust = `style="font-size: 85%"`;
+    if(split[1].length > 8) textAdjust = `style="font-size: 70%"`;
     return `${split[0]}<br><span ${textAdjust}>${split[1]}</span>`;
+  }
+  else
+  {
+    console.log(key);
+    return key;
+  }
 }
